@@ -14,6 +14,3 @@ while True:
             pygame.quit() # Close window
             quit() # End pygame
 
-
-
-
