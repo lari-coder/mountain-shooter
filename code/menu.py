@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from pygame import Font, Rect, Surface
 import pygame.image
-
 from code.const import C_ORANGE, C_WHITE, C_YELLOW, MENU_OPTION, WIN_WIDTH
 
 class Menu:
