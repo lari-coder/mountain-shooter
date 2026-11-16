@@ -5,9 +5,11 @@ import random
 import sys
 import pygame
 from code.const import C_WHITE, EVENT_ENEMY, MENU_OPTION, SPAWN_TIME, WIN_HEIGHT
+from code.enemy import Enemy
 from code.entity import Entity
 from code.entityFactory import EntityFactory
 from code.entityMediator import EntityMediator
+from code.player import Player
 
 class Level:
     def __init__(self, window, name, game_mode):
@@ -31,6 +33,10 @@ class Level:
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
+                if isinstance(ent, (Player, Enemy)):
+                    shot = ent.shot()
+                    if shot is not None:
+                        self.entity_list.append(shot)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
