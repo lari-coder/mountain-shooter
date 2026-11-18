@@ -4,7 +4,7 @@
 import random
 import sys
 import pygame
-from code.const import C_WHITE, EVENT_ENEMY, MENU_OPTION, SPAWN_TIME, WIN_HEIGHT
+from code.const import C_CYAN, C_GREEN, C_WHITE, EVENT_ENEMY, MENU_OPTION, SPAWN_TIME, WIN_HEIGHT
 from code.enemy import Enemy
 from code.entity import Entity
 from code.entityFactory import EntityFactory
@@ -37,6 +37,11 @@ class Level:
                     shot = ent.shot()
                     if shot is not None:
                         self.entity_list.append(shot)
+                if ent.name == 'Player1':
+                    self.level_text(text_size=14, text=f'Player1 - Health: {ent.health} | Score: {ent.score}', text_color= C_GREEN, text_pos=(10, 25))
+                if ent.name == 'Player2':
+                    self.level_text(text_size=14, text=f'Player2 - Health: {ent.health} | Score: {ent.score}', text_color= C_CYAN, text_pos=(10, 45))
+                
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
