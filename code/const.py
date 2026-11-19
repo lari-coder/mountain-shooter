@@ -78,8 +78,8 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player1': 15,
-    'Player2': 15,
+    'Player1': 10,
+    'Player2': 10,
     'Enemy1': 100,
     'Enemy2': 200,
 }
@@ -98,9 +98,9 @@ ENTITY_SPEED = {
     'Level2Bg3': 3,
     'Level2Bg4': 4,
     'Player1': 4,
-    'Player1Shot': 1,
+    'Player1Shot': 8,
     'Player2': 4,
-    'Player2Shot': 3,
+    'Player2Shot': 8,
     'Enemy1': 1,
     'Enemy1Shot': 5,
     'Enemy2': 1,
@@ -135,10 +135,30 @@ P_K_SHOT = {'Player1': pygame.K_SPACE,
 SPAWN_TIME = 4000
 
 #T
-TIMEOUT_LEVEL = 10000 # 20 segundos
+TIMEOUT_LEVEL = 30000 # 30 segundos
 TIMEOUT_STEP = 100 # 100 ms
 
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
+
+# S
+SCORE_POS = { 
+    'Title': (WIN_WIDTH / 2, 50),
+    'EnterName': (WIN_WIDTH / 2, 95),
+    'Label': (WIN_WIDTH / 2, 95),
+    'Name': (WIN_WIDTH / 2, 130),
+    0: (WIN_WIDTH / 2, 125),
+    1: (WIN_WIDTH / 2, 145),
+    2: (WIN_WIDTH / 2, 165),
+    3: (WIN_WIDTH / 2, 185),
+    4: (WIN_WIDTH / 2, 205),
+    5: (WIN_WIDTH / 2, 225),
+    6: (WIN_WIDTH / 2, 245),
+    7: (WIN_WIDTH / 2, 265),
+    8: (WIN_WIDTH / 2, 285),
+    9: (WIN_WIDTH / 2, 305),
+}
+
+
 
